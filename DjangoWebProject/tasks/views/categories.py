@@ -48,7 +48,7 @@ class UpdateCategory(UpdateView):
 		form = CategoryForm
 		current_category = Category.objects.get(pk=category_id)
 		context = {'current_category': current_category, 'form': form}
-		return render(request, 'tasks/update_category.html', context)
+		return render(request, 'tasks/updatecategory.html', context)
 
 	def post(self, request, category_id):
 		current_category = Category.objects.get(pk=category_id)
@@ -62,4 +62,4 @@ class UpdateCategory(UpdateView):
 		current_task.details = taskdesc
 		current_task.save()
 		context = {'current_task': current_task, 'categories': categories}
-		return HttpResponseRedirect(reverse('tasks:task_details', args=(current_task.id,)))
+		return HttpResponseRedirect(reverse('tasks:category_list'))

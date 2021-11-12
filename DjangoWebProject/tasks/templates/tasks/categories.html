@@ -17,7 +17,7 @@
             <td> {{category.num_tasks}}</td>
             <td>
                 <a href="{% url 'tasks:delete_category' category.id %}" class="btn btn-primary">Delete Category</a>
-                <a href="{% url 'tasks:UpdateCategory' category.id %}" class="btn btn-primary">Update Category</a>
+                <a href="{% url 'tasks:updatecategory' category.id %}" class="btn btn-primary">Update Category</a>
             </td>
         </tr>
 {% endfor %}
