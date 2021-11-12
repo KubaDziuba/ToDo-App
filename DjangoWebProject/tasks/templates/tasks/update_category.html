@@ -1,0 +1,15 @@
+{% extends "maintemp.html" %}
+
+{% block content %}
+
+<form action="{% url 'tasks:update_category' current_category.id %}" method="post">
+     {% csrf_token %}
+     <fieldset>
+        <legend><h2>Please change category name</h2></legend>
+        <label for="category_name">Category name</label><br>
+        <input type="text" id="category_name" name="new_category" value="{{current_category.cay_name}}"><br>
+     </fieldset>
+     <p></p>
+     <input class="btn btn-success" type="submit" value="Update Category">
+</form>
+{% endblock %}

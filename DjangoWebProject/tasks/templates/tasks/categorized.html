@@ -1,0 +1,27 @@
+{% extends "maintemp.html" %}
+
+{% block content %}
+{% if categorized_tasks %}
+<h2>Category: {{selected_category}}</h2>
+
+<table class="table">
+		<thead class="thead-dark">
+		<tr>
+			<th>Task Name</th>
+			<th>Task Details</th>
+			<th>Category</th>
+		</tr>
+	</thead>
+		{%for task in categorized_tasks %}
+  <tr>
+    <td><a href="{% url 'tasks:task_details' task.id %}">{{task.name}}</a></td>
+    <td>{{task.details}}</td>
+    <td>{{task.category}}</td>
+  </tr>
+
+{%endfor %}
+</table>
+{% else %}
+<p>No tasks in this category</p>
+{%endif %}
+{% endblock %}

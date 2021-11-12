@@ -1,0 +1,28 @@
+{% extends "maintemp.html" %}
+
+{% block content %}
+{% if categories %}
+
+
+	<table class="table">
+        <thead class="thead-dark">
+		<tr>
+			<th>Category name</th>
+			<th>Tasks assigned</th>
+		</tr>
+	    </thead>
+        {% for category in categories %}
+        <tr>
+            <td>{{category.cat_name}}</td>
+            <td> {{category.num_tasks}}</td>
+            <td>
+                <a href="{% url 'tasks:delete_category' category.id %}" class="btn btn-primary">Delete Category</a>
+                <a href="{% url 'tasks:UpdateCategory' category.id %}" class="btn btn-primary">Update Category</a>
+            </td>
+        </tr>
+{% endfor %}
+    </table>
+{% else %}
+<p>No categories</p>
+{%endif %}
+{% endblock %}

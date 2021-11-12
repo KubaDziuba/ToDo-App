@@ -1,0 +1,30 @@
+{% extends "maintemp.html" %}
+
+{% block content %}
+
+
+<h1>{{ selected_task.name }}</h1>
+<p>{{ selected_task.details }}</p>
+<p>Category: {{ selected_task.category }}</p>
+{#{% if selected_task.is_finished %}#}
+
+<p>Task already finished</p>
+{#{% else %}#}
+<div class="btn-group">
+<!--ZAMYKANIE ZADANIA-->
+	<form action="{% url 'tasks:close_task' selected_task.id %}" method="post">
+     {% csrf_token %}
+     <input class="btn btn-primary" type="submit" value="Close task">
+	</form>
+	<p></p>
+<!--USUWANIE ZADANIA-->
+	<form action="{% url 'tasks:delete_task' selected_task.id %}" method="post">
+     {% csrf_token %}
+     <input class="btn btn-primary" type="submit" value="Delete task">
+	</form>
+	<p></p>
+<!--AKTUALIZACJA ZADANIA-->
+	<a href="{% url 'tasks:update_task' selected_task.id %}" class="btn btn-primary">Update Task</a>
+</div>
+{#{%endif %}#}
+{% endblock %}

@@ -1,0 +1,165 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>DjangoWebProject</Name>
+    <RootNamespace>DjangoWebProject</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e6b8df41-ee2d-492b-9c7f-de8fa02adc8a</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>DjangoWebProject.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="manage.py" />
+    <Compile Include="DjangoWebProject\__init__.py" />
+    <Compile Include="DjangoWebProject\settings.py" />
+    <Compile Include="DjangoWebProject\urls.py" />
+    <Compile Include="DjangoWebProject\wsgi.py" />
+    <Compile Include="tasks\admin.py" />
+    <Compile Include="tasks\apps.py" />
+    <Compile Include="tasks\forms.py" />
+    <Compile Include="tasks\migrations\0001_initial.py" />
+    <Compile Include="tasks\migrations\0002_auto_20210822_2224.py" />
+    <Compile Include="tasks\migrations\0003_auto_20210823_0628.py" />
+    <Compile Include="tasks\migrations\0004_task_is_finished.py" />
+    <Compile Include="tasks\migrations\0005_category_task_counter.py" />
+    <Compile Include="tasks\migrations\0006_remove_category_task_counter.py" />
+    <Compile Include="tasks\migrations\__init__.py" />
+    <Compile Include="tasks\models.py" />
+    <Compile Include="tasks\tests.py" />
+    <Compile Include="tasks\urls.py" />
+    <Compile Include="tasks\views\base.py" />
+    <Compile Include="tasks\views\categories.py" />
+    <Compile Include="tasks\views\tasks.py" />
+    <Compile Include="tasks\views\__init__.py" />
+    <Compile Include="tasks\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="tasks\migrations\__pycache__\0001_initial.cpython-38.pyc" />
+    <Content Include="tasks\migrations\__pycache__\0001_initial.cpython-39.pyc" />
+    <Content Include="tasks\migrations\__pycache__\0002_auto_20210822_2224.cpython-38.pyc" />
+    <Content Include="tasks\migrations\__pycache__\0002_auto_20210822_2224.cpython-39.pyc" />
+    <Content Include="tasks\migrations\__pycache__\0003_auto_20210823_0628.cpython-38.pyc" />
+    <Content Include="tasks\migrations\__pycache__\0003_auto_20210823_0628.cpython-39.pyc" />
+    <Content Include="tasks\migrations\__pycache__\0004_task_is_finished.cpython-38.pyc" />
+    <Content Include="tasks\migrations\__pycache__\0004_task_is_finished.cpython-39.pyc" />
+    <Content Include="tasks\migrations\__pycache__\0005_category_task_counter.cpython-39.pyc" />
+    <Content Include="tasks\migrations\__pycache__\0006_remove_category_task_counter.cpython-39.pyc" />
+    <Content Include="tasks\migrations\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="tasks\migrations\__pycache__\__init__.cpython-39.pyc" />
+    <Content Include="tasks\static\tasks\bootstrap.bundle.min.js" />
+    <Content Include="tasks\static\tasks\bootstrap.min.css" />
+    <Content Include="tasks\templates\maintemp.html" />
+    <Content Include="tasks\templates\tasks\categories.html" />
+    <Content Include="tasks\templates\tasks\categorized.html" />
+    <Content Include="tasks\templates\tasks\category_detail.html" />
+    <Content Include="tasks\templates\tasks\index.html" />
+    <Content Include="tasks\templates\tasks\maintemp.html" />
+    <Content Include="tasks\templates\tasks\newcategory.html" />
+    <Content Include="tasks\templates\tasks\newtask.html" />
+    <Content Include="tasks\templates\tasks\task_detail.html" />
+    <Content Include="tasks\templates\tasks\update_task.html" />
+    <Content Include="tasks\views\__pycache__\base.cpython-39.pyc" />
+    <Content Include="tasks\views\__pycache__\categories.cpython-39.pyc" />
+    <Content Include="tasks\views\__pycache__\tasks.cpython-39.pyc" />
+    <Content Include="tasks\views\__pycache__\__init__.cpython-39.pyc" />
+    <Content Include="tasks\__pycache__\admin.cpython-38.pyc" />
+    <Content Include="tasks\__pycache__\admin.cpython-39.pyc" />
+    <Content Include="tasks\__pycache__\apps.cpython-38.pyc" />
+    <Content Include="tasks\__pycache__\apps.cpython-39.pyc" />
+    <Content Include="tasks\__pycache__\forms.cpython-39.pyc" />
+    <Content Include="tasks\__pycache__\models.cpython-38.pyc" />
+    <Content Include="tasks\__pycache__\models.cpython-39.pyc" />
+    <Content Include="tasks\__pycache__\urls.cpython-38.pyc" />
+    <Content Include="tasks\__pycache__\urls.cpython-39.pyc" />
+    <Content Include="tasks\__pycache__\views.cpython-38.pyc" />
+    <Content Include="tasks\__pycache__\views.cpython-39.pyc" />
+    <Content Include="tasks\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="tasks\__pycache__\__init__.cpython-39.pyc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DjangoWebProject\" />
+    <Folder Include="tasks\" />
+    <Folder Include="tasks\migrations\" />
+    <Folder Include="tasks\migrations\__pycache__\" />
+    <Folder Include="tasks\static\" />
+    <Folder Include="tasks\static\tasks\" />
+    <Folder Include="tasks\templates\" />
+    <Folder Include="tasks\templates\tasks\" />
+    <Folder Include="tasks\views\" />
+    <Folder Include="tasks\views\__pycache__\" />
+    <Folder Include="tasks\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.9</Version>
+      <Description>env (Python 3.9 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

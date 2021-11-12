@@ -1,0 +1,17 @@
+{% extends "maintemp.html" %}
+
+{% block content %}
+
+
+<h4>{{ selected_category.cat_name }}</h4>
+
+
+<div class="btn-group">
+<!--USUWANIE KATEGORII-->
+	<form action="{% url 'tasks:delete_category' selected_category.id %}" method="post">
+     {% csrf_token %}
+     <input class="btn btn-primary" type="submit" value="Delete Category">
+	</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "maintemp.html" %}
+	{% load static %}
+ <link rel="stylesheet" type="text/css" href="{% static 'tasks/bootstrap.min.css' %}">
+ <script src="{% static 'tasks/bootstrap.bundle.min.js' %}"></script>
+
+{% block content %}
+{% if all_tasks %}
+
+
+	<table class="table">
+		<thead class="thead-dark">
+		<tr>
+			<th>Task Name</th>
+			<th>Task Details</th>
+			<th>Category</th>
+			<th>Completion</th>
+		</tr>
+	</thead>
+		{%for task in all_tasks %}
+  <tr>
+    <td><a href="{% url 'tasks:task_details' task.id %}">{{task.name}}</a></td>
+    <td>{{task.details}}</td>
+    <td>{{task.category}}</td>
+	  <td>{{task.is_finished}}</td>
+  </tr>
+
+{%endfor %}
+</table>
+{% else %}
+<p>No tasks</p>
+{%endif %}
+{% endblock %}
