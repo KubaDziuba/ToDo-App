@@ -79,7 +79,7 @@
     <Content Include="tasks\templates\tasks\newcategory.html" />
     <Content Include="tasks\templates\tasks\newtask.html" />
     <Content Include="tasks\templates\tasks\task_detail.html" />
-    <Content Include="tasks\templates\tasks\update_category.html" />
+    <Content Include="tasks\templates\tasks\updatecategory.html" />
     <Content Include="tasks\templates\tasks\update_task.html" />
     <Content Include="tasks\views\__pycache__\base.cpython-39.pyc" />
     <Content Include="tasks\views\__pycache__\categories.cpython-39.pyc" />

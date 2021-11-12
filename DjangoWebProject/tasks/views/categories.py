@@ -45,21 +45,17 @@ def delete_category(request, category_id):
 
 class UpdateCategory(UpdateView):
 	def get(self, request, category_id):
+		categories = Category.objects.all()
 		form = CategoryForm
 		current_category = Category.objects.get(pk=category_id)
-		context = {'current_category': current_category, 'form': form}
+		context = {'categories': categories, 'current_category': current_category, 'form': form}
 		return render(request, 'tasks/updatecategory.html', context)
 
 	def post(self, request, category_id):
+		categories = Category.objects.all()
 		current_category = Category.objects.get(pk=category_id)
-		categry_name =  request.POST['']
-		assigned_cat = request.POST['category_list']
-		category = Category.objects.get(cat_name=assigned_cat)
-		taskname = request.POST['new_task']
-		taskdesc = request.POST['new_task_desc']
-		current_task.category = category
-		current_task.name = taskname
-		current_task.details = taskdesc
-		current_task.save()
-		context = {'current_task': current_task, 'categories': categories}
+		category_name =  request.POST['new_category']
+		current_category.cat_name = category_name
+		current_category.save()
+		context = {'categories': categories}
 		return HttpResponseRedirect(reverse('tasks:category_list'))
